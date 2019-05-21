@@ -24,7 +24,7 @@
  */
 
 add_action( 'admin_menu', function () {
-	$page_id = get_option( 'page_on_front', 0 );
+	$page_id = absint( get_option( 'page_on_front', 0 ) );
 	if ( 0 === $page_id ) {
 		return;
 	}
